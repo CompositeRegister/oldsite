@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <style id="styles">
+    </style>
+    <link id="ss1" href="/mcss/css/posts-d.css" rel="stylesheet"/>
+    <style>
+        
+    </style>
+    <title>MCSS Changelog</title>
+</head>
+<body>
+    <a href="../">
+        <div class="back">
+            &#x25c0; Back
+        </div>
+        </a>
+        <a href="https://discordapp.com/oauth2/authorize?client_id=652726107535310859&permissions=16&scope=bot">
+            <div class="atd">
+                <img class="discordimg" src="/mcss/img/discordp.png"> Add to Discord
+            </div>
+            </a>
+    <h1>MCSS Changelog</h1>
+    <div id="myData"></div>
+    <script>
+        fetch('posts.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            
+            for (var i = 0; i < data.length; i++) {
+                var postDiv = document.createElement("div");
+                postDiv.className = 'post';
+                postDiv.id = 'post';
+                mainContainer.appendChild(postDiv);
+                //
+                var infoDiv = document.createElement("div");
+                infoDiv.className = 'info';
+                infoDiv.id = 'info';
+                postDiv.appendChild(infoDiv);
+                //
+                var titleDiv = document.createElement("div");
+                titleDiv.className = 'title';
+                titleDiv.id = 'title';
+                titleDiv.innerHTML = "Update " + data[i].version;
+                infoDiv.appendChild(titleDiv);
+                //
+                var dateDiv = document.createElement("div");
+                dateDiv.className = 'date';
+                dateDiv.id = 'date';
+                dateDiv.innerHTML = "Released " + data[i].date
+                infoDiv.appendChild(dateDiv);
+                //
+                var descDiv = document.createElement('div');
+                descDiv.id = 'des';
+                descDiv.innerHTML = '<br>' + data[i].des;
+                descDiv.className = 'des';
+                postDiv.appendChild(descDiv);
+            }
+        }
+
+        
+    </script>
+    <script src="/mcss/flse/global.js"></script>
+    <script src="/mcss/flse/flse.js"></script>
+</body>
+</html>

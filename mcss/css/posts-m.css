@@ -1,0 +1,124 @@
+body{
+    background-image: url(/mcss/img/back.jpg);
+    font-family: 'Inter', sans-serif;
+text-shadow: 2px 2px 8px #000000;
+text-align: center;
+color:white;
+}
+h1{
+    margin-top:85px;
+}
+.info{
+background: rgba(255, 255, 255, 0.75);
+border: solid 2px #efefef;
+padding: 20px;
+border-radius: 25px;
+text-shadow: 0px 0px 0px #000000;
+}
+.post{
+    padding: 8px;
+border:1px solid rgba(47,49,54,.5);
+margin: auto;
+background: rgba(0, 0, 0, 0.45);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+text-align:center;
+border-radius: 25px;
+width:90%;
+margin-bottom: 15px;
+font-size:25px;
+}
+.title{
+    font-weight: bold;
+    font-size:24px;
+margin-bottom: 10px;
+
+}
+.date{
+    font-size: 18px;
+    font-style: italic;
+}
+.des{
+    margin-top:-20px;
+font-size:20px;
+margin-bottom:10px;
+line-height: 28pt;
+margin-left:5px;
+margin-right:5px;
+}
+a{
+color:white;
+transition: 0.3s;
+}
+a:hover {
+color: rgb(255, 115, 115);
+}
+
+.back{
+display: flex;
+align-items:center;
+z-index: 10;
+position:fixed;
+top: 15px;
+left: 15px;
+font-size:21px;
+background:rgba(0, 0, 0, 0.45);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+border-radius:15px;
+padding:9px;
+transition:0.5s;
+}
+.discordimg{
+height:25px;
+padding-right: 5px;
+filter: drop-shadow(2px 2px 4px #222)
+}
+.atd{
+display: flex;
+align-items:center;
+position:fixed;
+top: 15px;
+right: 15px;
+font-size:21px;
+background:rgba(0, 0, 0, 0.45);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+border-radius:15px;
+padding:9px;
+transition:0.5s;
+z-index: 10;
+}
+
+.atd:hover{
+background:rgba(44, 44, 44, 0.75);
+color: #7289DA;
+}
+
+.back:hover{
+color: rgb(255, 115, 115);
+background:rgba(44, 44, 44, 0.75);
+}
+@media (prefers-color-scheme: dark) {
+h1, h2, h3, h4, h6, p, footer, a{
+color:rgb(218, 218, 218);
+}
+body{
+color:rgb(226, 226, 226);
+background:
+linear-gradient(
+  rgba(0, 0, 0, 0.5), 
+  rgba(0, 0, 0, 0.5)
+),
+url(back.jpg);
+}
+.info{
+background: rgba(46, 46, 46, 0.50);
+border: solid 2px #363636;
+}
+
+
+}

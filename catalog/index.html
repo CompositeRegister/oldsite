@@ -1,0 +1,161 @@
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .content{
+        margin: 90px 10% 0 10%;
+    }
+    .listing{
+        background-color: lightgray;
+        padding: 20px 20px;
+        display:inline-block; 
+        width:100%;
+        height:150px;
+        max-height: 300px;
+        position:relative;
+        border-radius: 25px;
+    }
+    .imageside{
+        float:left;
+        display:table-cell; 
+        margin-right: 25px;
+        height: 100%;
+    }
+
+    .listing h2,h3{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .listing h2{
+        font-size:28px;
+    }
+    .listing h3{
+        font-style: italic;
+    }
+    .textside{
+        display:table-cell; 
+    }
+    a{
+        color:black;
+
+        border-radius: 15px;
+        transition: 0.4s ease-out;
+    }
+    a:hover{
+
+color:orangered;
+    }
+    #link{
+        position:absolute;
+    bottom:25px;
+        padding: 10px 10px;
+        background-color: grey;
+        border: solid 2px transparent;
+        transition: 0.4s ease-out;
+    }
+
+    #link:hover{
+        transform: scale(1.05);
+        background-color: #202020;
+        border: solid 2px orangered;
+        transition: transform 0.2s ease-out, border 0.2s ease-out;
+    }
+    @media (prefers-color-scheme: dark) {
+        body{
+            background-color: black;
+            color:white;
+        }
+        .listing{
+            background-color: #3a3a3a;
+        
+        }
+        a{
+        color:white;
+    }
+    }
+</style>
+<div class="content">
+    <h1><a href="/">nhofer.xyz </a>/<span><a href="/catalog">catalog</a></span></h1>
+<div id="myData"></div>
+
+</div>
+<script>
+    
+    fetch('catalog.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            
+            for (var i = 0; i < data.length; i++) {
+                var postDiv = document.createElement("div");
+                postDiv.className = 'listing';
+                postDiv.id = data[i].id;
+                mainContainer.appendChild(postDiv);
+//
+                var textDiv = document.createElement("div");
+                textDiv.className = 'textside';
+                textDiv.id = data[i].id;
+                mainContainer.appendChild(textDiv);
+                //
+                var imageman = document.createElement("img");
+                imageman.className = 'imageside';
+                imageman.id = data[i].id;
+                imageman.src = 'logo.png';
+                postDiv.appendChild(imageman);
+
+                // textDiv
+                var textDiv = document.createElement("div");
+                textDiv.className = 'textside';
+                textDiv.id = data[i].id;
+                postDiv.appendChild(textDiv);
+                //
+                var infoDiv = document.createElement("div");
+                infoDiv.className = 'info';
+                infoDiv.id = 'info';
+                textDiv.appendChild(infoDiv);
+                //
+                var titleDiv = document.createElement("h2");
+                titleDiv.className = 'title';
+                titleDiv.id = 'title';
+                titleDiv.innerHTML = data[i].title;
+                textDiv.appendChild(titleDiv);
+                //
+                var dateDiv = document.createElement("h3");
+                dateDiv.className = 'date';
+                dateDiv.id = 'date';
+                dateDiv.innerHTML = "Published " + data[i].date
+                textDiv.appendChild(dateDiv);
+                //
+                var descDiv = document.createElement('div');
+                descDiv.id = 'des';
+                descDiv.innerHTML = data[i].des;
+                descDiv.className = 'des';
+                textDiv.appendChild(descDiv);
+                //
+                var linkDiv = document.createElement('a');
+                linkDiv.id = 'link';
+                linkDiv.innerHTML = "Read Article";
+                linkDiv.href = "content/" + data[i].id + ".html";
+                postDiv.appendChild(linkDiv);
+                //
+                var selectCon = document.getElementById("verSelect");
+                var optVal = document.createElement('option');
+                optVal.value = data[i].id;
+    optVal.innerHTML = data[i].version;
+    selectCon.appendChild(optVal);
+            }
+        }
+
+        
+    
+</script>

@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--backcolor);
+}
+a{
+    color: var(--textcolor);
+    transition: 0.3s;
+}
+a:hover{
+    color:orangered;
+}
+h1,h2,h3,h4,h5,h6,p{
+    font-family: 'Inter', 'Kosugi Maru', sans-serif;
+    color: var(--textcolor);
+}
+.content{
+    margin: 90px 10% 90px 10%;
+}
+.logo{
+    height:100px;
+    border-radius: 50px;
+}
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  hr.divider{
+        border: 1px solid rgb(124, 124, 124);
+        width: 40%;
+        display: block;
+        float:left;
+        border-style: inset;
+        border-width: 1px;
+  }
+  hr.divider2{
+    border: 1px rgba(124, 124, 124, 0.432);
+    width: 40%;
+    display: block;
+    float:left;
+    border-style: inset;
+    border-width: 1px;
+}
+hr.divider3{
+    border: 1px rgba(124, 124, 124, 0.432);
+    width: 40%;
+    display: inline;
+    float:left;
+    border-style: inset;
+    border-width: 1px;
+    margin-top:0px;
+}
