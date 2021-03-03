@@ -3,14 +3,22 @@ body{
     padding: 0;
     background-color: var(--backcolor);
 }
+.nav {
+    width: 100%;
+    text-align: center;
+    margin-top:15px;
+}
 a{
     color: var(--textcolor);
     transition:0.3s;
 }
+.active{
+    font-weight: bold;
+}
 a:hover{
     color:orangered;
 }
-h1,h2,h3,h4,h5,h6,p{
+h1,h2,h3,h4,h5,h6,p,a{
     font-family: 'Inter', 'Kosugi Maru', sans-serif;
     color: var(--textcolor);
 }
