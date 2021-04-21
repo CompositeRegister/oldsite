@@ -141,7 +141,7 @@
                     var titleDiv = document.createElement("h2");
                     titleDiv.className = 'title';
                     titleDiv.id = 'title';
-                    titleDiv.innerHTML = data[i].title;
+                    titleDiv.innerHTML = "";
                     textDiv.appendChild(titleDiv);
                     //
                     var dateDiv = document.createElement("h3");
@@ -158,9 +158,9 @@
                     //
                     var linkDiv = document.createElement('a');
                     linkDiv.id = 'link';
-                    linkDiv.innerHTML = "Read Article";
+                    linkDiv.innerHTML = data[i].title;
                     linkDiv.href = "content/" + data[i].id + ".html";
-                    postDiv.appendChild(linkDiv);
+                    titleDiv.appendChild(linkDiv);
                     //
                     var selectCon = document.getElementById("verSelect");
                     var optVal = document.createElement('option');
