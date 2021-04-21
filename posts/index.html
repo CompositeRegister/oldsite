@@ -54,14 +54,7 @@
         
         color:orangered;
             }
-            #link{
-                position:absolute;
-            bottom:25px;
-                padding: 10px 10px;
-                background-color: grey;
-                border: solid 2px transparent;
-                transition: 0.4s ease-out;
-            }
+
         
             #link:hover{
                 transform: scale(1.05);
@@ -152,12 +145,6 @@
                     textDiv.id = data[i].id;
                     mainContainer.appendChild(textDiv);
                     //
-                    var imageman = document.createElement("img");
-                    imageman.className = 'imageside';
-                    imageman.id = data[i].id;
-                    imageman.src = 'logo.png';
-                    postDiv.appendChild(imageman);
-    
                     // textDiv
                     var textDiv = document.createElement("div");
                     textDiv.className = 'textside';
