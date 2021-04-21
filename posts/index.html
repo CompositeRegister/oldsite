@@ -1,0 +1,211 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>nhofer.xyz</title>
+        <style id="styles">
+        </style>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .content{
+                margin: 90px 10% 0 10%;
+            }
+            .listing{
+                background-color: lightgray;
+                padding: 20px 20px;
+                display:inline-block; 
+                width:100%;
+                height:150px;
+                max-height: 300px;
+                position:relative;
+                border-radius: 25px;
+            }
+            .imageside{
+                float:left;
+                display:table-cell; 
+                margin-right: 25px;
+                height: 100%;
+            }
+        
+            .listing h2,h3{
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            .listing h2{
+                font-size:28px;
+            }
+            .listing h3{
+                font-style: italic;
+            }
+            .textside{
+                display:table-cell; 
+            }
+            a{
+                color:black;
+        
+                border-radius: 15px;
+                transition: 0.4s ease-out;
+            }
+            a:hover{
+        
+        color:orangered;
+            }
+            #link{
+                position:absolute;
+            bottom:25px;
+                padding: 10px 10px;
+                background-color: grey;
+                border: solid 2px transparent;
+                transition: 0.4s ease-out;
+            }
+        
+            #link:hover{
+                transform: scale(1.05);
+                background-color: #202020;
+                border: solid 2px orangered;
+                transition: transform 0.2s ease-out, border 0.2s ease-out;
+            }
+            @media (prefers-color-scheme: dark) {
+                body{
+                    background-color: black;
+                    color:white;
+                }
+                .listing{
+                    background-color: #3a3a3a;
+                
+                }
+                a{
+                color:white;
+            }
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Kosugi+Maru&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/images/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+        <link id="ss1" href="/css/index-d.css" rel="stylesheet"/>
+    </head>
+    <div class="nav">
+        <p>
+        <a class="active" href="/">home</a> &#8226; 
+        <a href="/posts">posts</a>
+    </p>
+    </div>
+        <div class="content">
+            <img class="logo" alt="profile image" src="/images/logo.jpeg">
+            <h1><span style="color:orangered">nhofer.xyz</span></h1>
+            <h2>Portfolio</h2>
+            <hr class="divider2"><br>
+            <h3>Lead Web Developer @ <a target="_blank" href="http://123computer.net">123computer.net</a></h3>
+            <h4 style="margin-bottom:20px;">2019-present</h4>
+           <!-- <hr class="divider2"><br>
+            <h3>Minecraft Server Status Landing Page / "Cards UI 2"</h3>
+            <h4 style="margin-bottom:20px;">I created the landing page for  <a target="_blank" href="http://123computer.net/mcss">Minecraft Server Status</a></h4>-->
+            <hr class="divider"><br>
+            <h2>Past Experience</h2>
+            <hr class="divider2"><br>
+            <h3>Coral Video</h3>
+            <h4>2021 - Coral Video was an attempt at a free and open video sharing service that shuttered its doors only a month after conception.</h4>
+            <hr class="divider"><br>
+            <!--<p>This is an incomplete landing page, and will be updated soon! (:</p>-->
+            <p>2021 nhofer/CompositeRegister</p>
+            <!--<hr class="divider3"><br>
+            <p style="margin-top:0px;">Check out <a target="_blank" href="https://github.com/stel-la/flse">Fast Layout and Substratum Engine (FLSE)</a> by <a target="_blank" href="https://github.com/ejaz4">ejaz</a></p>-->
+            </div> 
+    </body>
+    <script>
+    
+        fetch('catalog.json')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    appendData(data);
+                })
+                .catch(function (err) {
+                    console.log('error: ' + err);
+                });
+            function appendData(data) {
+                var mainContainer = document.getElementById("myData");
+                
+                for (var i = 0; i < data.length; i++) {
+                    var postDiv = document.createElement("div");
+                    postDiv.className = 'listing';
+                    postDiv.id = data[i].id;
+                    mainContainer.appendChild(postDiv);
+    //
+                    var textDiv = document.createElement("div");
+                    textDiv.className = 'textside';
+                    textDiv.id = data[i].id;
+                    mainContainer.appendChild(textDiv);
+                    //
+                    var imageman = document.createElement("img");
+                    imageman.className = 'imageside';
+                    imageman.id = data[i].id;
+                    imageman.src = 'logo.png';
+                    postDiv.appendChild(imageman);
+    
+                    // textDiv
+                    var textDiv = document.createElement("div");
+                    textDiv.className = 'textside';
+                    textDiv.id = data[i].id;
+                    postDiv.appendChild(textDiv);
+                    //
+                    var infoDiv = document.createElement("div");
+                    infoDiv.className = 'info';
+                    infoDiv.id = 'info';
+                    textDiv.appendChild(infoDiv);
+                    //
+                    var titleDiv = document.createElement("h2");
+                    titleDiv.className = 'title';
+                    titleDiv.id = 'title';
+                    titleDiv.innerHTML = data[i].title;
+                    textDiv.appendChild(titleDiv);
+                    //
+                    var dateDiv = document.createElement("h3");
+                    dateDiv.className = 'date';
+                    dateDiv.id = 'date';
+                    dateDiv.innerHTML = "Published " + data[i].date
+                    textDiv.appendChild(dateDiv);
+                    //
+                    var descDiv = document.createElement('div');
+                    descDiv.id = 'des';
+                    descDiv.innerHTML = data[i].des;
+                    descDiv.className = 'des';
+                    textDiv.appendChild(descDiv);
+                    //
+                    var linkDiv = document.createElement('a');
+                    linkDiv.id = 'link';
+                    linkDiv.innerHTML = "Read Article";
+                    linkDiv.href = "content/" + data[i].id + ".html";
+                    postDiv.appendChild(linkDiv);
+                    //
+                    var selectCon = document.getElementById("verSelect");
+                    var optVal = document.createElement('option');
+                    optVal.value = data[i].id;
+        optVal.innerHTML = data[i].version;
+        selectCon.appendChild(optVal);
+                }
+            }
+    
+            
+        
+    </script>
+    <script src="/js/global.js"></script>
+    <script src="/js/flse.js"></script>
+</html>
+
+</div>
