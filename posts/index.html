@@ -54,7 +54,9 @@
         color:orangered;
             }
 
-        
+        #myData{
+            padding:0;
+        }
            
             @media (prefers-color-scheme: dark) {
                 body{
@@ -114,7 +116,7 @@
                     console.log('error: ' + err);
                 });
             function appendData(data) {
-                var mainContainer = document.getElementById("myData");
+                var mainContainer = document.getElementsByClassName("content");
                 
                 for (var i = 0; i < data.length; i++) {
                     var postDiv = document.createElement("div");
