@@ -23,7 +23,7 @@ h1,h2,h3,h4,h5,h6,p,a{
     color: var(--textcolor);
 }
 .content{
-    margin: 15px 5% 0 5%;
+    margin: 20px 5% 0 5%;
 }
 .logo{
     height:100px;
