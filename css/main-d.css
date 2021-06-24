@@ -1,0 +1,26 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.call{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.barnav{
+    background-color:rgba(219, 219, 219);
+    padding: 15px;
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:15px;
+}
+.barnav a{
+    margin-right: 5px;
+    color:black;
+}
+.post{
+    border: 2px solid gray;
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:5px 15px;
+}
