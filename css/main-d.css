@@ -24,3 +24,11 @@ body{
     margin-right:auto;
     padding:5px 15px;
 }
+footer{
+    bottom : 15px;
+    margin-top : 40px;  
+    text-align: center;  
+    vertical-align: middle; 
+    position:fixed;
+    width:100%;
+}

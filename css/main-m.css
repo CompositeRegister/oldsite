@@ -3,4 +3,32 @@ body{
 }
 .call{
     font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.barnav{
+    background-color:rgba(219, 219, 219);
+    padding: 15px;
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:15px;
+}
+.barnav a{
+    margin-right: 5px;
+    color:black;
+}
+.post{
+    border: 2px solid gray;
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:5px 15px;
+}
+footer{
+    bottom : 15px;
+    margin-top : 40px;  
+    text-align: center;  
+    vertical-align: middle; 
+    position:fixed;
+    width:100%;
 }
