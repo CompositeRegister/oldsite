@@ -34,7 +34,8 @@ body{
     text-align: left;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.4); 
 }
-.post h4{
+.post h2{
+    font-size:1em;
     margin-top: 0px;
     margin-bottom:5px;
     }
@@ -46,6 +47,9 @@ body{
   text-justify: inter-word;
         
     }
+    .post span.date{
+        font-weight: normal;
+        }
 footer{
     position: absolute;
     bottom: 5px;

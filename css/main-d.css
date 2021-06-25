@@ -36,7 +36,7 @@ body{
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.4); 
 }
 
-.post h4{
+.post h2{
 margin-top: 0px;
 margin-bottom:5px;
 }
@@ -45,6 +45,9 @@ margin-bottom:5px;
     margin-bottom:0px;
     text-align: justify;
   text-justify: inter-word;
+}
+.post span.date{
+font-weight: normal;
 }
 .post img{
     float:left;
