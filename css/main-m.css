@@ -14,29 +14,29 @@ body{
     margin-left:auto;
     margin-right:auto;
     margin-bottom:10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); 
 }
 .barnav a{
     margin-right: 5px;
     color:black;
 }
 .post{
-    border: 2px solid gray;
     width:90%;
     margin-left:auto;
     margin-right:auto;
-    padding:5px 15px;
+    padding:15px 15px;
     margin-bottom:10px;
     overflow: hidden;
     text-align: left;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.4); 
 }
 .post h4{
-    margin-top: 5px;
+    margin-top: 0px;
     margin-bottom:5px;
     }
     .post p{
         margin-top:0px;
-        text-align: justify;
-      text-justify: inter-word;
+        margin-bottom:0px;
     }
 footer{
     position: absolute;
