@@ -11,6 +11,7 @@ body{
 .call{
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    margin: 5px auto;
 }
 .barnav{
     background-color:rgb(219, 219, 219);
