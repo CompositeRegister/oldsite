@@ -26,7 +26,18 @@ body{
     margin-right:auto;
     padding:5px 15px;
     margin-bottom:10px;
+    overflow: hidden;
+    text-align: left;
 }
+.post h4{
+    margin-top: 5px;
+    margin-bottom:5px;
+    }
+    .post p{
+        margin-top:0px;
+        text-align: justify;
+      text-justify: inter-word;
+    }
 footer{
     position: absolute;
     bottom: 0;
@@ -36,18 +47,12 @@ footer{
     vertical-align: middle; 
 }
     
-.info{
-    border: 2px solid gray;
-    width:90%;
-    margin-left:auto;
-    margin-right:auto;
-    padding:5px 15px;
-    margin-bottom:15px;
-    overflow: hidden;
-    text-align: left;
-}
 
-.info img{
+
+.post img{
     float:left;
     margin-right:15px;
 }
+.topnav-right {
+    float: right;
+  }
