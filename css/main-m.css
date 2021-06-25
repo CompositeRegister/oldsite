@@ -37,6 +37,10 @@ body{
     .post p{
         margin-top:0px;
         margin-bottom:0px;
+        hyphens: auto;
+        text-align: justify;
+  text-justify: inter-word;
+        
     }
 footer{
     position: absolute;
