@@ -1,8 +1,8 @@
 body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
-    background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(177,177,177,1) 0%, rgba(255,255,255,1) 100%) fixed;
+    background: var(--grad);
+color:var(--text-color);
 }
 .call{
     font-family: 'Courier New', Courier, monospace;
@@ -10,7 +10,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(177,177,177,1) 0%, rgba
     margin: 5px auto;
 }
 .barnav{
-    background-color:rgb(219, 219, 219);
+    background-color:var(--navback);
     padding: 15px;
     margin-left:10px;
     margin-right:10px;
@@ -19,16 +19,21 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(177,177,177,1) 0%, rgba
 }
 .barnav a{
     margin-right: 5px;
-    color:black;
+    color:var(--text-color);
 }
+.barnav a:visited{
+    color:var(--text-color);
+}
+
 .post{
-    background-color: white;
+    background-color: var(--postback);
     margin-left:10px;
     margin-right:10px;
     padding:15px 15px;
     margin-bottom:10px;
     overflow: hidden;
     text-align: left;
+    color:var(--text-color);
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.4); 
 }
 .post h2{
@@ -64,4 +69,26 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(177,177,177,1) 0%, rgba
 }
 .topnav-right {
     float: right;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root{
+        --postback:rgb(26, 26, 26);
+        --navback:rgb(32, 32, 32);
+        --text-color:white;
+        --grad: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(46, 46, 46) 0%, rgb(59, 59, 59) 100%) fixed;
+    }
+    a{
+        color:cornflowerblue;
+    }
+    a:visited{
+        color:rgb(185, 124, 255);
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    :root{
+        --postback:white;
+        --navback:rgb(219, 219, 219);
+        --text-color:black;
+        --grad: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(177,177,177,1) 0%, rgba(255,255,255,1) 100%) fixed;
+    }
   }
