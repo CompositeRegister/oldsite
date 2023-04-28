@@ -10,23 +10,23 @@ body{
     color: var(--foreground);
 }
 .clock{
-    width:90%;
-    height:90%;
+    width:100%;
+    height:100%;
     margin:auto;
     
 }
 .time{
-    font-size:150px;
+    font-size:240px;
     text-align: center;
     width:100%;
-    margin-top:200px;
+    margin-top:145px;
     
 }
 .date{
-    font-size:40px;
+    font-size:55px;
     text-align: center;
     width:100%;
-    margin-top:0px;
+    margin-top:-20px;
     
 }
 
