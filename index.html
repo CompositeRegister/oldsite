@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <link href="/css/style.css?v=1.1" rel="stylesheet">
+</head>
+<body class="crt">
+    <div class="clock"><div id="time" class="time">9:18PM</div><div id="date" class="date">April 27, 2023</div></div>
+
+    <script>
+        function currentTime() {
+  let date = new Date(); 
+  let hh = date.getHours();
+  let mm = date.getMinutes();
+  let ss = date.getSeconds();
+  let year = date.getFullYear(); 
+  let day = date.getDate(); 
+  let session = "AM";
+  var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+  if(hh === 0){
+      hh = 12;
+  }
+  if(hh > 12){
+      hh = hh - 12;
+      session = "PM";
+   }
+
+   hh = (hh < 10) ? "0" + hh : hh;
+   mm = (mm < 10) ? "0" + mm : mm;
+   ss = (ss < 10) ? "0" + ss : ss;
+    
+   let time = hh + ":" + mm + ":" + ss + " " + session;
+   let datef = monthNames[date.getMonth()] + " " + day + ", " + year;
+
+
+  document.getElementById("time").innerText = time; 
+  document.getElementById("date").innerText = datef; 
+  let t = setTimeout(function(){ currentTime() }, 1000);
+}
+
+currentTime();
+        </script>
+
+</body>
+
+</html>
